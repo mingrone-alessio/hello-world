@@ -1,0 +1,293 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  padding: 5px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, background 0.3s;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+section, aside {
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2, aside h2 {
+  color: #007bff;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+
+.services {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.service {
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, background 0.3s;
+  flex: 1;
+  min-width: 250px;
+}
+
+.service img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.service:hover {
+  transform: translateY(-10px);
+  background: #007bff;
+  color: #fff;
+}
+
+.offer-card {
+  display: flex;
+  background: #f9f9f9;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
+  overflow: hidden;
+  align-items: center;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.offer-card:hover {
+  transform: scale(1.05);
+  background: #007bff;
+  color: #fff;
+}
+
+.offer-card:hover .offer-details h2 {
+  color: #fff;
+}
+
+.offer-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.offer-details {
+  padding: 20px;
+  flex: 1;
+}
+
+.offer-details h3 {
+  margin: 0;
+  color: inherit;
+}
+
+.offer-details p {
+  margin: 5px 0;
+  color: inherit;
+}
+
+.contact-info {
+  font-style: italic;
+}
+
+footer {
+  background-color: #007bff;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-content li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.footer-content a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-content a:hover {
+  color: #ffdd57;
+}
+
+@media (max-width: 650px) {
+  header {
+    padding: 10px 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  section, aside {
+    padding: 10px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (min-width: 651px) and (max-width: 1024px) {
+  .services {
+    flex-direction: column;
+  }
+
+  .service {
+    text-align: left;
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1025px) {
+  body {
+    font-size: 16px;
+  }
+
+  .logo img {
+    width: 120px;
+  }
+
+  nav ul {
+    gap: 20px;
+  }
+
+  main {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.call-center {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.call-center img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.call-details {
+  flex: 1;
+}
+
+.call-details p {
+  margin-bottom: 10px;
+}
+
+.call-details strong {
+  font-size: 1.2em;
+}
+
+.call-details a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.call-details a:hover {
+  background-color: #0056b3;
+}
